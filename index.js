@@ -1,4 +1,5 @@
 var nlp = require('compromise')
+nlp.extend(require('compromise-numbers'))
 
 var t = nlp('dinasour').nouns().toPlural()
 console.log(t.text())
@@ -22,3 +23,7 @@ newNoun.nouns().toPlural()
 console.log(newNoun.text());
 
 // .numbers()
+let myNum = nlp('one hundred twenty two')
+myNum.numbers().add(2)
+console.log(myNum.text())
+// 'one hundred twenty two four'
