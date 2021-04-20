@@ -27,3 +27,11 @@ let myNum = nlp('one hundred twenty two')
 myNum.numbers().add(2)
 console.log(myNum.text())
 // 'one hundred twenty two four'
+
+// .topics() - access name, places, org etc.
+let spot = nlp('buddyHolly')
+spot.people().if('mary').json()
+
+
+spot = nlp('the opera about Axay visiting japan')
+console.log(spot.topics().json());
