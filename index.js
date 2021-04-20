@@ -35,3 +35,24 @@ spot.people().if('mary').json()
 
 spot = nlp('the opera about Axay visiting japan')
 console.log(spot.topics().json());
+// [ { text: 'japan', terms: [ [Object] ] } ]
+
+// contractions - Handle implicit terms
+let term = nlp("we're not gonna take it, no we aren't gonna take it.")
+// match term
+term.has('going') // true
+
+// transform
+term.contractions().expand()
+console.log(term.text()) // we are not going to take it, no we are not going to take it.
+
+// nagative
+var negative = nlp('Kella is calling')
+negative.verbs().toNegative()
+console.log(negative.text());
+// Kella is not calling
+
+// minus or math
+var bottle = nlp('two bottles of juice')
+bottle.numbers().minus(1)
+console.log(bottle.text()); // one bottle of juice
