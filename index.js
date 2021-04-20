@@ -33,7 +33,8 @@ let spot = nlp('buddyHolly')
 spot.people().if('mary').json()
 
 
-spot = nlp('the opera about Axay visiting japan')
+// spot = nlp('the opera about Axay visiting japan')
+spot = nlp('Vivek to come up with powerpoint UX wireframes and validate with Hemant in Bangalore. Hemant can validate with his contacts too in Mumbai. Kamal and Akshay to pair and develop a skeleton app in lambda and s3 using react so that we can prove to ourselves that we do not need a running server and can do it using only the on-demand priced components (Hyderabad).')
 console.log(spot.topics().json());
 // [ { text: 'japan', terms: [ [Object] ] } ]
 
