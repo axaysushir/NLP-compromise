@@ -53,7 +53,16 @@ negative.verbs().toNegative()
 console.log(negative.text());
 // Kella is not calling
 
-// minus or math
+// minus or arithmetic math operations
 var bottle = nlp('two bottles of juice')
 bottle.numbers().minus(1)
 console.log(bottle.text()); // one bottle of juice
+
+var money = nlp('I have one lakh dollars')
+money.numbers().plus(200124)
+console.log(money.text());
+// I have two hundred thousand one hundred and twenty five lakhs dollars
+
+// var money = nlp('I have one lakh dollars')
+// money.numbers().div(12)
+// console.log(money.text());
