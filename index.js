@@ -13,8 +13,13 @@ console.log(m.text())
 // .verbs() - conjugate and negate verbs in any tense:
 
 let verb = nlp('she sells seashells by the seashore.')
-verb.verbs().toPastTense()
+verb.verbs().toPastTense() // Convert sentence to past tense
 console.log(verb.text())
+
+// Future tense
+let example = nlp('I sell some gadgets to him.')
+example.verbs().toFutureTense()
+console.log(example.text());
 
 // .nouns() - Play between plural. singular and possesive form 
 
