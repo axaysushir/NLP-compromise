@@ -5,7 +5,7 @@ var t = nlp('dinasour').nouns().toPlural()
 console.log(t.text())
 
 // .match() - Match text
-let doc = nlp('i went on a talk')
+let doc = nlp('i went on a talk, i walk')
 let m = doc.match('. walk', { fuzzy: 0.7 })
 
 console.log(m.text())
