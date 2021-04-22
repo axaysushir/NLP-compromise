@@ -58,6 +58,10 @@ negative.verbs().toNegative()
 console.log(negative.text());
 // Kella is not calling
 
+var positive = nlp("I'm not there") // convert to positive
+positive.verbs().toPositive()
+console.log(positive.text());
+
 // minus or arithmetic math operations
 var bottle = nlp('two bottles of juice')
 bottle.numbers().minus(1)
