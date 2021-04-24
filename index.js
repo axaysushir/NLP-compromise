@@ -10,6 +10,13 @@ let m = doc.match('. walk', { fuzzy: 0.7 })
 
 console.log(m.text())
 
+let ex = nlp("You are Ankita Patel").match('#FirstName @isTitleCase').text()
+console.log(ex);
+
+// named capture
+let named = nlp('first, turn left and enter the tunnel').match('turn [<direction>(left|right|up|down)]', 'direction').text()
+console.log(named); // return left
+
 // .verbs() - conjugate and negate verbs in any tense:
 
 let verb = nlp('she sells seashells by the seashore.')
