@@ -73,7 +73,7 @@ var positive = nlp("I'm not there") // convert to positive
 positive.verbs().toPositive()
 console.log(positive.text());
 
-// minus or arithmetic math operations
+// NUMBERS - Plus, minus or arithmetic math operations
 var bottle = nlp('two bottles of juice')
 bottle.numbers().minus(1)
 console.log(bottle.text()); // one bottle of juice
@@ -83,6 +83,12 @@ money.numbers().plus(200124)
 console.log(money.text());
 // I have two hundred thousand one hundred and twenty five lakhs dollars
 
-// var money = nlp('I have one lakh dollars')
-// money.numbers().div(12)
-// console.log(money.text());
+let superman = nlp("i have two questions for Homer - 'Why lie?' and 'Lies, why?'")
+let numbers = superman.values()
+console.log(numbers.out('array')); // [ 'two' ]
+
+var money = nlp('I have two lakh dollars')
+money.numbers().increment()
+console.log(money.text()); // I have two lakh dollars
+money.numbers().decrement()
+console.log(money.text());
