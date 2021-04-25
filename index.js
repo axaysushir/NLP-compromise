@@ -28,6 +28,10 @@ let example = nlp('I sell some gadgets to him.')
 example.verbs().toFutureTense()
 console.log(example.text());
 
+let ex2 = nlp('I tell her one joke.')
+ex2.verbs().toFutureTense()
+console.log(ex2.text());
+
 // .nouns() - Play between plural. singular and possesive form 
 
 let newNoun = nlp('the yellow car')
