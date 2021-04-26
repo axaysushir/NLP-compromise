@@ -38,6 +38,10 @@ let newNoun = nlp('the yellow car')
 newNoun.nouns().toPlural()
 console.log(newNoun.text());
 
+let roses = nlp('The children play in garden.')
+roses.nouns().toSingular()
+console.log(roses.text()); // The child play in garden.
+
 // .numbers()
 let myNum = nlp('one hundred twenty two')
 myNum.numbers().add(2)
