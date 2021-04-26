@@ -100,3 +100,15 @@ money.numbers().increment()
 console.log(money.text()); // I have two lakh dollars
 money.numbers().decrement()
 console.log(money.text());
+
+// Compromise accessors
+
+// .first() - use only first result
+let cars = nlp(`Ferrari, ford mustang, Lamborghini`)
+cars.first()
+// cars.last()
+console.log(cars.text()); // Ferrari
+// .last()
+// let cars2 = nlp(`Pontiac Buick, Ford Mustang, Honda Civic`).nouns()
+// cars2.last().text()
+// console.log(cars2.text())
