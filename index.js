@@ -73,6 +73,10 @@ var positive = nlp("I'm not there") // convert to positive
 positive.verbs().toPositive()
 console.log(positive.text());
 
+var text = nlp("They aren't coming tomorrow")
+text.verbs().toPositive()
+console.log(text.text()); // They are coming tomorrow
+
 // NUMBERS - Plus, minus or arithmetic math operations
 var bottle = nlp('two bottles of juice')
 bottle.numbers().minus(1)
