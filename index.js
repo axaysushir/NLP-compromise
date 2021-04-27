@@ -112,3 +112,5 @@ console.log(cars.text()); // Ferrari
 // let cars2 = nlp(`Pontiac Buick, Ford Mustang, Honda Civic`).nouns()
 // cars2.last().text()
 // console.log(cars2.text())
+
+

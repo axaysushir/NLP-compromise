@@ -1,0 +1,12 @@
+<!-- // how to use it on client side // -->
+
+<script src="https://unpkg.com/compromise"></script>
+<script src="https://unpkg.com/compromise-numbers"></script>
+<script>
+  nlp.extend(compromiseNumbers)
+
+  var doc = nlp('two bottles of beer')
+  doc.numbers().minus(1)
+  document.body.innerHTML = doc.text()
+  // 'one bottle of beer'
+</script>
