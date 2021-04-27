@@ -114,3 +114,39 @@ console.log(cars.text()); // Ferrari
 // console.log(cars2.text())
 
 
+// .extend()
+let myWords = {
+    jhon: 'FirstName',
+    doe: 'FirstName'
+}
+
+let user = nlp(muppetText, myWords)
+
+// make heavier changes
+nlp.extend((Doc,world) => {
+    // add new tags
+    world.addTags({
+        Charcter: {
+            isA: 'Person',
+            notA: 'Adjective',
+        },
+    })
+
+    // add or change word in lexicon
+    world.addWords({
+        jhon: 'Character',
+        jane: 'Character',
+    })
+
+    // add method to run after the tagger
+    world.postProcess(doc => {
+        doc.match('light the lights').tag('#verb . #Plural')
+    })
+
+    // add the whold new method
+    Doc.proptotype.jhinVoice = () => {
+        this.sentences().prepend('well,')
+        this.match('i [(am|was)]').prepend('um,')
+        return this
+    }
+})
