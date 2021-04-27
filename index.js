@@ -144,7 +144,7 @@ nlp.extend((Doc,world) => {
     })
 
     // add the whold new method
-    Doc.proptotype.jhinVoice = () => {
+    Doc.proptotype.johnVoice = () => {
         this.sentences().prepend('well,')
         this.match('i [(am|was)]').prepend('um,')
         return this
