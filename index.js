@@ -104,14 +104,19 @@ console.log(money.text());
 // Compromise accessors
 
 // .first() - use only first result
+// this type not working only gives first result, when try to access last property it still return first property.
 let cars = nlp(`Ferrari, ford mustang, Lamborghini`)
 cars.first()
 // cars.last()
-console.log(cars.text()); // Ferrari
+// console.log(cars.text()); // Ferrari
 // .last()
 // let cars2 = nlp(`Pontiac Buick, Ford Mustang, Honda Civic`).nouns()
 // cars2.last().text()
 // console.log(cars2.text())
+
+let bikes = nlp('Harley Davidson', 'Ducati', 'KTM')
+bikes.last()
+console.log(bikes.text()); 
 
 
 // .extend()
@@ -143,7 +148,7 @@ nlp.extend((Doc,world) => {
         doc.match('light the lights').tag('#verb . #Plural')
     })
 
-    // add the whold new method
+    // add the whole new method
     Doc.proptotype.johnVoice = () => {
         this.sentences().prepend('well,')
         this.match('i [(am|was)]').prepend('um,')
