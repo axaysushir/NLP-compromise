@@ -122,8 +122,8 @@ let umbrella = nlp(`Rihanna, Ember Island, Moonshine`)
 umbrella.first()
 console.log(umbrella.text()); // not working only return whole string not first or last words
 
-/*
-// .extend()
+
+// .extend() method
 let myWords = {
     jhon: 'FirstName',
     doe: 'FirstName'
@@ -159,4 +159,3 @@ nlp.extend((Doc,world) => {
         return this
     }
 })
-*/
