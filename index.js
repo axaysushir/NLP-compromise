@@ -13,6 +13,9 @@ console.log(m.text())
 let ex = nlp("You are Ankita Patel").match('#FirstName @isTitleCase').text()
 console.log(ex);
 
+let exGirlFriend = nlp("You are Sapna Chauhan").match('#LastName @isTitleCase')
+console.log(exGirlFriend.text());
+
 // named capture
 let named = nlp('first, turn left and enter the tunnel').match('turn [<direction>(left|right|up|down)]', 'direction').text()
 console.log(named); // return left
