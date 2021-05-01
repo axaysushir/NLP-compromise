@@ -125,7 +125,7 @@ let umbrella = nlp(`Rihanna, Ember Island, Moonshine`)
 umbrella.first()
 console.log(umbrella.text()); // not working only return whole string not first or last words
 
-
+/*
 // .extend() method
 let myWords = {
     jhon: 'FirstName',
@@ -162,3 +162,38 @@ nlp.extend((Doc,world) => {
         return this
     }
 })
+*/
+
+var myPlugin = function(Doc, world) {
+    // add method
+    Doc.prototype.beNice = () => {
+        this.match('#Infinitive').prepend('kindly')
+        return this
+    }
+
+    // add some tags
+    world.addTags({
+        Charcter: {
+            isA: 'Person',
+            notA: 'Adjective', // conflicting tags can be array
+            color: 'red'
+        }
+    })
+
+    // add some words
+    world.addWords({
+        gonzo: 'MaleName',
+        kermot: 'Frog',
+        'minnie mouse': 'Character'
+    })
+
+    // post-process tagger
+    world.postProcess(doc => {
+        doc.match('light the light').tag('#verb', '#plural')
+    })
+}
+
+{
+    nlp.extend(myPlugin)
+    return console.log(nlp('wash the floor').beNice().text())
+}
