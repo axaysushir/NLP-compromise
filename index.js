@@ -193,7 +193,29 @@ var myPlugin = function(Doc, world) {
     })
 }
 
-{
-    nlp.extend(myPlugin)
-    return console.log(nlp('wash the floor').beNice().text())
-}
+// {
+//     nlp.extend(myPlugin)
+//     return console.log(nlp('wash the floor').beNice().text())
+// }
+
+let logexample = nlp(`gonzo, minnie mouse and kermit the frog`)
+logexample = logexample.splitAfter('@hasComma')
+let z = logexample.match('#character+')
+console.log(z.out('array')); // [] return empty array
+
+// custom verb conjugations
+
+nlp.extend((_Doc, world) => {
+    world.addConjugations({ swell: {Pasttense: 'got swol'}})
+})
+
+const conjuc = nlp('swell').tag('Verb')
+console.log(conjuc.verbs().conjugate()[0]);
+// {
+//     Pasttense: 'got swol',
+//     Gerund: 'swelling',
+//     PastTense: 'swelled',
+//     PresentTense: 'swells',
+//     Infinitive: 'swell',
+//     FutureTense: 'will swell'
+//   }
