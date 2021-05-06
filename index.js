@@ -221,7 +221,7 @@ console.log(conjuc.verbs().conjugate()[0]);
 //   }
 
 var url = nlp('visit https://en.m.wikipedia.org/wiki/Main_Page').urls().out('array')
-console.log(url);
+console.log(url); // raised PR for this issue
 
 var url2 = nlp('visit www.yahoo.com').urls().out('array')
 console.log(url2)
@@ -232,3 +232,7 @@ console.log(url3)
 var url4 = nlp('visit http://in.en.yahoo.com').urls().out('array')
 console.log(url4)
 // [ 'http://in.en.yahoo.com' ]
+var url5 = nlp('visit http://in-something.en.yahoo.com').urls().out('array')
+console.log(url5) // raised PR for this issue
+var url6 = nlp('visit yahoo.com').urls().out('array')
+console.log(url6); // ['yahoo.com']
