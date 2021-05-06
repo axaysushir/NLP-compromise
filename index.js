@@ -219,3 +219,16 @@ console.log(conjuc.verbs().conjugate()[0]);
 //     Infinitive: 'swell',
 //     FutureTense: 'will swell'
 //   }
+
+var url = nlp('visit https://en.m.wikipedia.org/wiki/Main_Page').urls().out('array')
+console.log(url);
+
+var url2 = nlp('visit www.yahoo.com').urls().out('array')
+console.log(url2)
+// [ 'www.yahoo.com' ]
+var url3 = nlp('visit http://www.yahoo.com').urls().out('array')
+console.log(url3)
+// [ 'http://www.yahoo.com' ]
+var url4 = nlp('visit http://in.en.yahoo.com').urls().out('array')
+console.log(url4)
+// [ 'http://in.en.yahoo.com' ]
