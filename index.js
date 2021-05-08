@@ -232,7 +232,7 @@ console.log(url3)
 var url4 = nlp('visit http://in.en.yahoo.com').urls().out('array')
 console.log(url4)
 // [ 'http://in.en.yahoo.com' ]
-var url5 = nlp('visit http://in-something.en.yahoo.com').urls().out('array')
+var url5 = nlp('visit https://en.m.wikipedia.org').urls().out('array')
 console.log(url5) // raised PR for this issue
 var url6 = nlp('visit yahoo.com').urls().out('array')
 console.log(url6); // ['yahoo.com']
