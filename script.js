@@ -21,3 +21,22 @@ console.log((json));
 //     },
 //     { text: 'silent', normal: 'silent', syllables: [ 'silent' ] }
 // ]
+
+let doc = nlp("That may not sound impressive, but keep in mind it is a very big canyon.")
+let m = doc.match('(sound|very)')
+console.log(m.syllables({ offset:true }))
+
+// [
+//     {
+//       text: 'sound',
+//       terms: [ [Object] ],
+//       offset: { index: 3, start: 13, length: 5 },
+//       syllables: [ 'sound' ]
+//     },
+//     {
+//       text: 'very',
+//       terms: [ [Object] ],
+//       offset: { index: 12, start: 56, length: 4 },
+//       syllables: [ 've', 'ry' ]
+//     }
+// ]
