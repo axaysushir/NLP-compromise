@@ -1,4 +1,5 @@
 var nlp = require('compromise')
+
 nlp.extend(require('compromise-numbers'))
 
 var t = nlp('dinasour').nouns().toPlural()
@@ -236,3 +237,10 @@ var url5 = nlp('visit https://en.m.wikipedia.org').urls().out('array')
 console.log(url5) // raised PR for this issue
 var url6 = nlp('visit yahoo.com').urls().out('array')
 console.log(url6); // ['yahoo.com']
+
+
+
+
+const word = 'silent';
+
+console.log(nlp(word).terms().syllables()[0].syllables);
