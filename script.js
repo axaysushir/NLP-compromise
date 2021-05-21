@@ -30,6 +30,10 @@ let dict = nlp("That may not sound impressive, but keep in mind it is a very big
 let o = dict.match('(impressive|canyon)')
 console.log(o.syllables({ offset:true }))
 
+let dict2 = nlp("I played a song, it's awesome song i ever heard.")
+let o0 = dict.match('(played|awesome)')
+console.log(oo.syllables({ offset:true }))
+
 // [
 //     {
 //       text: 'sound',
