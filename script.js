@@ -26,6 +26,10 @@ let doc = nlp("That may not sound impressive, but keep in mind it is a very big 
 let m = doc.match('(sound|very)')
 console.log(m.syllables({ offset:true }))
 
+let dict = nlp("That may not sound impressive, but keep in mind it is a very big canyon.")
+let o = dict.match('(impressive|canyon)')
+console.log(o.syllables({ offset:true }))
+
 // [
 //     {
 //       text: 'sound',
@@ -40,3 +44,19 @@ console.log(m.syllables({ offset:true }))
 //       syllables: [ 've', 'ry' ]
 //     }
 // ]
+
+// [
+//     {
+//       text: 'impressive,',
+//       terms: [ [Object] ],
+//       offset: { index: 4, start: 19, length: 11 },
+//       syllables: [ 'im', 'pres', 'sive' ]
+//     },
+//     {
+//       text: 'canyon.',
+//       terms: [ [Object] ],
+//       offset: { index: 14, start: 65, length: 7 },
+//       syllables: [ 'ca', 'nyon' ]
+//     }
+//   ]
+  
