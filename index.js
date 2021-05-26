@@ -62,6 +62,8 @@ spot = nlp('Vivek to come up with powerpoint UX wireframes and validate with Hem
 console.log(spot.topics().json());
 // [ { text: 'japan', terms: [ [Object] ] } ]
 
+var jack = nlp("I have to go to Chennai and meet Jigar for his work, then we both have to go to Delhi togather.")
+console.log(jack.topics().json());
 // contractions - Handle implicit terms
 let term = nlp("we're not gonna take it, no we aren't gonna take it.")
 // match term
@@ -80,6 +82,10 @@ console.log(negative.text());
 var positive = nlp("I'm not there") // convert to positive
 positive.verbs().toPositive()
 console.log(positive.text());
+
+var pos = nlp("She can't talk to me!, but i always not trying to impress her...")
+pos.verbs().toPositive()
+console.log(pos.text());
 
 var text = nlp("They aren't coming tomorrow")
 text.verbs().toPositive()
