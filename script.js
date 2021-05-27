@@ -2,7 +2,7 @@ const nlp = require('compromise')
 nlp.extend(require('compromise-syllables'))
 
 
-const word = 'silencer are silent'
+const word = 'silence are silent'
 console.log(nlp(word).terms().syllables()[0].syllables);
 
 let json = nlp('Chocolate microscopes silent').terms().syllables();
