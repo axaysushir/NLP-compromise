@@ -92,7 +92,7 @@ let userId = 'd9218fe4-ae03-48ae-af68-92b9289a42f3'
 let d = () => {
     userlist.forEach((user) => {
         if (user.id === userId) {
-        return (user.id, user.permissions)
+        console.log(user.id, user.permissions)
 
         }
     } )
