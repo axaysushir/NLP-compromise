@@ -119,7 +119,7 @@ let f = () => {
         }
     } )
 }
-f()
+f() // d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
 
 // flatMap
 let g = () => {
@@ -130,4 +130,4 @@ let g = () => {
         }
     } )
 }
-g()
+g() // d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
