@@ -90,6 +90,17 @@ let userlist = [
 
 let userId = 'd9218fe4-ae03-48ae-af68-92b9289a42f3'
 let d = () => {
+    userlist.filter((user) => {
+        if (user.id === userId) {
+        console.log(user.id, user.permissions)
+
+        }
+    } )
+}
+d() // d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
+
+// foreach
+let e = () => {
     userlist.forEach((user) => {
         if (user.id === userId) {
         console.log(user.id, user.permissions)
@@ -97,4 +108,26 @@ let d = () => {
         }
     } )
 }
-d()
+e() // d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
+
+// MAP
+let f = () => {
+    userlist.map((user) => {
+        if (user.id === userId) {
+        console.log(user.id, user.permissions)
+
+        }
+    } )
+}
+f()
+
+// flatMap
+let g = () => {
+    userlist.flatMap((user) => {
+        if (user.id === userId) {
+        console.log(user.id, user.permissions)
+
+        }
+    } )
+}
+g()
