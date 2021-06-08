@@ -32,6 +32,10 @@ let example = nlp('I sell some gadgets to him.')
 example.verbs().toFutureTense()
 console.log(example.text());
 
+let example2 = nlp('I call her in evening.')
+example2.verbs().toFutureTense()
+console.log(example2.text());
+
 let ex2 = nlp('I tell her one joke.')
 ex2.verbs().toFutureTense()
 console.log(ex2.text());
