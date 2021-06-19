@@ -1,6 +1,6 @@
 Create Git commit at any past date and time:
 
-git commit --amend --no-edit --date="Sun Jun 13 3:00:00 2021 -0600" 
+git commit --amend --no-edit --date="Mon Jun 14 3:00:00 2021 -0600" 
 
 Create empty git commit using this command:
 

@@ -110,7 +110,7 @@ let e = () => {
 }
 e() // d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
 
-// MAP
+// MAP method
 let f = () => {
     userlist.map((user) => {
         if (user.id === userId) {
@@ -121,7 +121,7 @@ let f = () => {
 }
 f() // d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
 
-// flatMap
+// flatMap - flat result in new array.
 let g = () => {
     userlist.flatMap((user) => {
         if (user.id === userId) {
