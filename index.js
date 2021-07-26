@@ -252,7 +252,8 @@ console.log(url5) // raised PR for this issue
 var url6 = nlp('visit yahoo.com').urls().out('array')
 console.log(url6); // ['yahoo.com']
 
-
+var url7 = nlp('visit www.yahoo.com/app').urls().out('array')
+console.log(url7); 
 
 
 const word = 'silent';
