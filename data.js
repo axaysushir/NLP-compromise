@@ -1,4 +1,4 @@
-// JavaScript Array methods.
+// JavaScript Array methods filter(), map(), flatMap(), forEach()
 let userlist = [
     {
         "id": "d9218fe4-ae03-48ae-af68-92b9289a42f3",
