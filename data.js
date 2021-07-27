@@ -1,3 +1,4 @@
+// JavaScript Array methods.
 let userlist = [
     {
         "id": "d9218fe4-ae03-48ae-af68-92b9289a42f3",
@@ -108,7 +109,8 @@ let e = () => {
         }
     } )
 }
-e() // d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
+e() 
+// d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
 
 // MAP method
 let f = () => {
@@ -119,7 +121,8 @@ let f = () => {
         }
     } )
 }
-f() // d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
+f() 
+// d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
 
 // flatMap - flat result in new array.
 let g = () => {
@@ -130,4 +133,5 @@ let g = () => {
         }
     } )
 }
-g() // d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
+g() 
+// d9218fe4-ae03-48ae-af68-92b9289a42f3 [ 'MANAGE_LICENSES', 'MANAGE_USERS' ]
